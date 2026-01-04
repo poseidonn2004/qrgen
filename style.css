@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 13px;
+}
+
+input {
+    width: 100%;
+    padding: 6px;
+    margin: 4px 0 8px 0;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+#qr-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#qr-img {
+    width: 200px;
+    height: 200px;
+}
+
+.account-box {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.account-box label {
+    display: block;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.account-cards {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.account-card {
+    flex: 1;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+    background: #f9f9f9;
+}
+
+.account-card:hover {
+    border-color: #007bff;
+}
+
+.account-card.active {
+    border-color: #007bff;
+    background: #eaf2ff;
+}
+
+.bank-name {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.bank-number {
+    font-size: 12px;
+    color: #555;
+    margin-top: 2px;
+}
+
+#amount {
+    font-size: 18px;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+#content {
+    font-size: 18px;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+#copy-qr {
+    margin-top: 6px;
+    background: #28a745;
+}
+
+#copy-qr:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+/* ===== CĂN GIỮA CHO BẢN WEB ===== */
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    /* căn giữa ngang */
+    align-items: center;
+    /* căn giữa dọc */
+
+    background: #f2f4f8;
+}
+
+/* KHUNG APP */
+.app {
+    width: 320px;
+    /* rộng hơn extension một chút */
+    padding: 16px;
+
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
