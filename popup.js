@@ -1,4 +1,4 @@
-let selectedBank = "mbbank";
+let selectedQrBaseUrl = document.querySelector(".account-card.active")?.dataset.account;
 
 const amountInput = document.getElementById("amount");
 const qrImg = document.getElementById("qr-img");
@@ -25,7 +25,9 @@ document.querySelectorAll(".account-card").forEach(card => {
             .forEach(c => c.classList.remove("active"));
 
         card.classList.add("active");
-        selectedBank = card.dataset.bank;
+
+        // 👉 LẤY URL QR GỐC TRỰC TIẾP
+        selectedQrBaseUrl = card.dataset.account;
     });
 });
 
@@ -41,15 +43,13 @@ document.getElementById("generate").addEventListener("click", () => {
         return;
     }
 
-    let qrBaseUrl = "";
-    if (selectedBank === "mbbank") {
-        qrBaseUrl = "https://img.vietqr.io/image/mbbank-262888888626-print.jpg";
-    } else {
-        qrBaseUrl = "https://img.vietqr.io/image/vietinbank-113366668888-print.jpg";
+    if (!selectedQrBaseUrl) {
+        alert("Vui lòng chọn tài khoản");
+        return;
     }
 
     const qrUrl =
-        qrBaseUrl +
+        selectedQrBaseUrl +
         "?amount=" + amount +
         "&addInfo=" + encodeURIComponent(content);
 
