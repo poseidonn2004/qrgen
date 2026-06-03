@@ -40,8 +40,9 @@ button:hover {
 }
 
 #qr-img {
-    width: 500px;
-    height: 500px;
+    wwidth: 100%;
+    max-width: 500px;
+    height: auto;
 }
 
 
@@ -147,7 +148,9 @@ body {
 
 /* KHUNG APP */
 .app {
-    width: 320px;
+    width: 90vw;
+    max-width: 700px;
+
     /* rộng hơn extension một chút */
     padding: 16px;
 
